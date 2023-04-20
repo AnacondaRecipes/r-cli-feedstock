@@ -25,7 +25,7 @@ requirements:
     - {{ compiler('c') }}              # [not win]
     #- {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
-    - {{ compiler('m2w64_toolchain') }}      # [win]
+    - {{ compiler('m2w64-toolchain') }}      # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
