@@ -39,6 +39,8 @@ requirements:
     - r-base {{ r_version }}
   run:
     - r-base {{ r_version }}
+    # bk: not sure why this is needed
+    - m2w64-libwinpthread-git      # [win]
     - {{ native }}gcc-libs         # [win]
 
 test:
@@ -62,3 +64,9 @@ extra:
   recipe-maintainers:
     - conda-forge/r
     - ianaobi
+  anaconda-services:
+    ref:  https://anaconda.zendesk.com/agent/tickets/35116
+    reason: "needed for r-devtools"
+    recipe-maintainers:
+      - bkreider
+
